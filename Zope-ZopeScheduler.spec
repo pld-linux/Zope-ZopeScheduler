@@ -3,7 +3,7 @@ Summary:	Cron like service for Zope
 Summary(pl):	Produkt dla Zope pomocny przy wywo³ywaniu okresowych zadañ
 Name:		Zope-%{zope_subname}
 Version:	0.2
-Release:	0.2
+Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://dev.legco.biz/downloads/%{zope_subname}-%{version}.tar.gz
