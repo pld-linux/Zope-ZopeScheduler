@@ -3,7 +3,7 @@ Summary:	Cron like service for Zope
 Summary(pl):	Produkt dla Zope pomocny przy wywo³ywaniu okresowych zadañ
 Name:		Zope-%{zope_subname}
 Version:	0.2
-Release:	0.1
+Release:	0.2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://dev.legco.biz/downloads/%{zope_subname}-%{version}.tar.gz
@@ -42,21 +42,17 @@ cp -af %{zope_subname}/{Extensions,skins,zpt,*.py,refresh.txt,version.txt} $RPM_
 rm -rf $RPM_BUILD_ROOT
 
 %post
-for p in ZopeScheduler ; do
-        /usr/sbin/installzopeproduct %{_datadir}/%{name}/$p
-done
+/usr/sbin/installzopeproduct %{_datadir}/%{name} %{zope_subname}
 if [ -f /var/lock/subsys/zope ]; then
-	/etc/rc.d/init.d/zope restart >&2
+        /etc/rc.d/init.d/zope restart >&2
 fi
 
 %postun
 if [ "$1" = "0" ]; then
-        for p in ZopeScheduler ; do
-                /usr/sbin/installzopeproduct -d $p
-        done
-	if [ -f /var/lock/subsys/zope ]; then
-            /etc/rc.d/init.d/zope restart >&2
-	fi
+        /usr/sbin/installzopeproduct -d %{zope_subname}
+        if [ -f /var/lock/subsys/zope ]; then
+                /etc/rc.d/init.d/zope restart >&2
+        fi
 fi
 
 %files
