@@ -9,6 +9,7 @@ Group:		Development/Tools
 Source0:	http://dev.legco.biz/downloads/%{zope_subname}-%{version}.tar.gz
 # Source0-md5:	0dfcd5fa753a499b7e9f294971971f40
 URL:		http://dev.legco.biz/products/ZopeScheduler/
+BuildRequires:  python
 %pyrequires_eq	python-modules
 Requires:	Zope
 Requires:	Zope-TimerService
