@@ -44,15 +44,15 @@ rm -rf $RPM_BUILD_ROOT
 %post
 /usr/sbin/installzopeproduct %{_datadir}/%{name} %{zope_subname}
 if [ -f /var/lock/subsys/zope ]; then
-        /etc/rc.d/init.d/zope restart >&2
+	/etc/rc.d/init.d/zope restart >&2
 fi
 
 %postun
 if [ "$1" = "0" ]; then
-        /usr/sbin/installzopeproduct -d %{zope_subname}
-        if [ -f /var/lock/subsys/zope ]; then
-                /etc/rc.d/init.d/zope restart >&2
-        fi
+	/usr/sbin/installzopeproduct -d %{zope_subname}
+	if [ -f /var/lock/subsys/zope ]; then
+		/etc/rc.d/init.d/zope restart >&2
+	fi
 fi
 
 %files
