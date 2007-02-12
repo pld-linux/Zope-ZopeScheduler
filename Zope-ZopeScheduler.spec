@@ -1,6 +1,6 @@
 %define		zope_subname	ZopeScheduler
 Summary:	Cron like service for Zope
-Summary(pl.UTF-8):   Produkt dla Zope pomocny przy wywoływaniu okresowych zadań
+Summary(pl.UTF-8):	Produkt dla Zope pomocny przy wywoływaniu okresowych zadań
 Name:		Zope-%{zope_subname}
 Version:	0.2
 Release:	2
