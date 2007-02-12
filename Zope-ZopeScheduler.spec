@@ -1,6 +1,6 @@
 %define		zope_subname	ZopeScheduler
 Summary:	Cron like service for Zope
-Summary(pl):	Produkt dla Zope pomocny przy wywo≥ywaniu okresowych zadaÒ
+Summary(pl.UTF-8):   Produkt dla Zope pomocny przy wywo≈Çywaniu okresowych zada≈Ñ
 Name:		Zope-%{zope_subname}
 Version:	0.2
 Release:	2
@@ -21,9 +21,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 ZopeScheduler - Cron like service for Zope.
 
-%description -l pl
-ZopeScheduler jest produktem dla Zope pomocnym przy wywo≥ywaniu
-okresowych zadaÒ.
+%description -l pl.UTF-8
+ZopeScheduler jest produktem dla Zope pomocnym przy wywo≈Çywaniu
+okresowych zada≈Ñ.
 
 %prep
 %setup -q -c
